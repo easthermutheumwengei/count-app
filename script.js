@@ -1,20 +1,28 @@
-const Button = document.querySelectorAll("btn");
-const counter = document.querySelector("");
+let button = document.querySelectorAll(".btn");
+let counter = document.querySelector(".counter");
 
-increaseButton.addEventListener("mouseover",
+let initial=0;
+let count= initial;
+let inc= function(e){
+  if(e.target.innerHTML== "Decrease"){
+     counter.innerHTML= --count;
+  }else if(e.target.innerHTML== "Reset"){
+     
+      counter.innerHTML=initial;
+       count=initial;
+  }else if(e.target.innerHTML==
+    "Increase") {
+        counter.innerHTML= ++count;
+    } 
+       
 
-    function() {
-        const CounterInteger = parseInt(counter.innerHTML)
-        const increaseValue = CounterInteger + 1;
-        counter.innerHTML = increaseValue;
-    });
-resetButton.addEventListener("click", function() {
-    const CounterInteger = parseInt(counter.innerHTML)
-    const resetInterger = CounterInteger 0;
-    counter.innerHTML = resetValue;
-});
-decreaseButton.addEventListener("mouseover", function() {
-    const CounterInteger = parseInt(counter.innerHTML)
-    const decreaseInteger = CounterInteger - 1;
-    counter.innerHTML = decreaseValue;
-});
+};
+// for (let i=0; i<button.length; i++){   //for loop
+//     button[i].addEventListener("click",inc);
+// };
+button.forEach(function(item){
+    item.addEventListener("click",inc);
+})
+
+
+
