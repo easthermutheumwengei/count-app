@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    height: 100vh;
+    background-color: #e5e5e5e5;
+}
+
+h1 {
+    background-color: #6AACB0;
+    width: 30%;
+    height: 90px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.text {
+    font-size: 150px;
+}
